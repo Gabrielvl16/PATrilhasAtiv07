@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+	
+    static void Main()
+    {
+        // Pedindo para úsuario digitar um número
+    	Console.WriteLine("Digite números inteiros para somar. Digite 0 para finalizar: ");
+    	
+    	// Laço de repetição para somar os números do úsuario
+    	int soma = 0;
+    	while(true){
+    		Console.WriteLine("Digite um número: ");
+    		int numero = int.Parse(Console.ReadLine());
+    		
+    		if (numero == 0){
+    			break;
+    		} else {
+    			 soma += numero;		    			
+    		}
+    	}
+    	// Exibindo resultado da soma
+    	Console.WriteLine("A soma dos números é: " + soma);
+    	
+    	Console.Write("Digite qualquer tecla para sair . . .");
+        Console.ReadKey(true);
+     }
+}
