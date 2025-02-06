@@ -1,0 +1,40 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+    	// Recebendo senha do úsuario
+        Console.WriteLine("Digite uma senha:");
+        string senhaCorreta = Console.ReadLine();
+       
+        // Definindo que úsuario tem apenas 3 tentativas
+        int tentativas = 0;
+        while (tentativas < 3)
+        {
+            Console.WriteLine("Digite sua senha para entrar:");
+            string senha = Console.ReadLine();
+
+            if (senha == senhaCorreta) 
+            {
+                Console.WriteLine("Senha correta!");
+                break;
+            }
+            else
+            {
+                tentativas++; 
+                if (tentativas < 3)
+                {
+                    Console.WriteLine("Senha incorreta! Você tem mais " + (3 - tentativas) + " tentativas.");
+                }
+                else
+                {
+                    Console.WriteLine("Você já tentou sua senha mais de três vezes, tente novamente mais tarde!");
+                }
+            }
+        }
+
+        Console.Write("Digite qualquer tecla para sair . . .");
+        Console.ReadKey(true);
+    }
+}
