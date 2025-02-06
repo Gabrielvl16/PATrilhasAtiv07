@@ -1,0 +1,32 @@
+using System;
+
+namespace B
+{
+	class Program
+	{
+		public static void Main()
+		{
+			// Dando instrução para o úsuario
+			Console.WriteLine("Digite uma sequencia de números inteiros positivos para serem somados. Digite um número negativo para parar.");
+		    
+			// pregrama para somar os números 
+			int soma = 0;
+			while(true){
+				Console.WriteLine("Digite um número: ");
+	   		    int numero = int.Parse(Console.ReadLine());
+				if (numero < 0)
+				{
+					Console.WriteLine("O seu resultado é: " + soma);
+					break;
+				} 
+			    else
+			    {
+			      soma = numero += soma;
+			    }
+			}
+			
+			Console.Write("Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
