@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+    	// Recebe número do úsuario
+    	Console.WriteLine("Digite um número inteiro é positivo: ");
+    	int numero = int.Parse(Console.ReadLine());
+    	
+    	// Conferindo se o número do úsuario é positivo e maior que zero
+    	if (numero <= 0)
+    	{
+    		Console.WriteLine("Digite um número positivo e maior que zero!");
+    		return;
+    		
+    	} else { // Codigo para exibir os número pares entre zero é o número do úsuario
+    		Console.WriteLine("Os números pares entre " + numero + " é zero são:");
+    	int i = 0;
+    	while (i <= numero)
+    	{
+    		if(i % 2 == 0)
+    		{
+    			Console.WriteLine(i + ", ");
+    		}
+    		i++;
+    	}
+    	
+      	Console.Write("Digite qualquer tecla para sair . . .");
+        Console.ReadKey(true);
+       }
+    }
+}
