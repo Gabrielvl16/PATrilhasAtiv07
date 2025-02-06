@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+    	// Recebe número do úsuario
+    	Console.WriteLine("Digite um número inteiro: ");
+    	int numero = int.Parse(Console.ReadLine());
+    	
+    	// Codigo para exibir tabuada
+    	Console.WriteLine("A tabuada do número " + numero + " é:");
+    	int i = 0;
+    	while(i <= 10) 
+    	{
+    		int resultado = numero * i;
+    		Console.WriteLine(numero + " x " + i + " = " + resultado);
+    		i++;
+    	}
+    	Console.Write("Digite qualquer tecla para sair . . .");
+        Console.ReadKey(true);
+     }
+}
