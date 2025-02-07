@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+      // Recebendo dados do úsuario
+      Console.WriteLine("Digite um número inteiro:");
+      int numero = int.Parse(Console.ReadLine());
+
+      int i = 1;
+      if(numero > 0) // Verifica se o número é inteiro e maior que zero
+      {
+        do // Codigo para mostar a tabuada 
+        {
+          int resultado = numero * i;
+          Console.WriteLine(numero + " x " + i + " = " + resultado);
+          i++;
+        } while(i <= 10);
+      }
+      else // Caso o úsuario não digite um número inteiro maior que zero
+      {
+       Console.WriteLine("O seu número não é inteiro ou maior que zero!");
+      }
+
+      Console.ReadKey(true);
+      Console.Write("Pressione qualquer tecla para sair . . .");
+    }
+}
