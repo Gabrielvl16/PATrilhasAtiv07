@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+      Console.WriteLine("Digite um número inteiro positivo: ");
+      int numero = int.Parse(Console.ReadLine());
+
+      if(numero < 0)
+      {
+         Console.WriteLine("O seu número não e um número inteiro ou positivo!");
+      }
+      else
+      {
+         Console.WriteLine("Os números pares entre 0 é " + numero + " são:");   
+         int i = 0;
+         do
+         {
+            if(i % 2 == 0)
+            {
+             Console.WriteLine(i);
+            }
+            i++;
+         }while(i <= numero)
+      }
+    }
+}
